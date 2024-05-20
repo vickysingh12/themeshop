@@ -2,10 +2,7 @@
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'section-main-blog.css' | asset_url | stylesheet_tag }}
 
-<div data-slide-speed="{{ section.settings.speed }}">
-  
-  </div>
-{% style %}
+{%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
@@ -18,15 +15,6 @@
     }
   }
 {%- endstyle -%}
-'hraf'
-
-{% javascript %}
-
- let checkthatval = '2342srtg123';
- console.log('checkthatvalcheckthatval checkthatval ' , checkthatval)
-
-{% endjavascript %}
-
 
 {%- paginate blog.articles by 6 -%}
   <div class="main-blog page-width section-{{ section.id }}-padding">

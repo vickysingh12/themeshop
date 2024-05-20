@@ -2,7 +2,7 @@
   {
     "name": "theme_info",
     "theme_name": "Dawn",
-    "theme_version": "13.0.1",
+    "theme_version": "14.0.0",
     "theme_author": "Shopify",
     "theme_documentation_url": "https://help.shopify.com/manual/online-store/themes",
     "theme_support_url": "https://support.shopify.com/"
@@ -34,7 +34,7 @@
     ]
   },
   {
-    "name": "ukh",
+    "name": "t:settings_schema.colors.name",
     "settings": [
       {
         "type": "color_scheme_group",
@@ -43,44 +43,43 @@
           {
             "type": "color",
             "id": "background",
-            "label": "lable1",
+            "label": "t:settings_schema.colors.settings.background.label",
             "default": "#FFFFFF"
           },
           {
             "type": "color_background",
             "id": "background_gradient",
-            "label": "lable2",
-            "info": "t:settings_schema.colors.settings.background_gradient.info",
-            "default": "linear-gradient(#ffffff, #000000)"
+            "label": "t:settings_schema.colors.settings.background_gradient.label",
+            "info": "t:settings_schema.colors.settings.background_gradient.info"
           },
           {
             "type": "color",
             "id": "text",
-            "label": "lable3",
+            "label": "t:settings_schema.colors.settings.text.label",
             "default": "#121212"
           },
           {
             "type": "color",
             "id": "button",
-            "label": "lable4",
+            "label": "t:settings_schema.colors.settings.button_background.label",
             "default": "#121212"
           },
           {
             "type": "color",
             "id": "button_label",
-            "label": "lable5",
+            "label": "t:settings_schema.colors.settings.button_label.label",
             "default": "#FFFFFF"
           },
           {
             "type": "color",
             "id": "secondary_button_label",
-            "label": "lable6",
+            "label": "t:settings_schema.colors.settings.secondary_button_label.label",
             "default": "#121212"
           },
           {
             "type": "color",
             "id": "shadow",
-            "label": "lable7",
+            "label": "t:settings_schema.colors.settings.shadow.label",
             "default": "#121212"
           }
         ],
@@ -97,7 +96,7 @@
           "primary_button_border": "button",
           "secondary_button": "background",
           "on_secondary_button": "secondary_button_label",
-          "secondary_button_border": "button"
+          "secondary_button_border": "secondary_button_label"
         }
       }
     ]
@@ -893,123 +892,88 @@
     ]
   },
   {
-    "name": "asdfghjkl",
-    "settings":[
+    "name": "t:settings_schema.content_containers.name",
+    "settings": [
       {
-
-        "type": "article",
-        "id": "article",
-        "label": "Article"
+        "type": "header",
+        "content": "t:settings_schema.global.settings.header__border.content"
       },
       {
-        "type": "blog",
-        "id": "blog",
-        "label": "Blog"
+        "type": "range",
+        "id": "text_boxes_border_thickness",
+        "min": 0,
+        "max": 24,
+        "step": 1,
+        "unit": "px",
+        "label": "t:settings_schema.global.settings.thickness.label",
+        "default": 0
       },
       {
-        "type": "collection",
-        "id": "collection",
-        "label": "Collection"
+        "type": "range",
+        "id": "text_boxes_border_opacity",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "%",
+        "label": "t:settings_schema.global.settings.opacity.label",
+        "default": 0
       },
       {
-        "type": "color_background",
-        "id": "backgroundo",
-        "label": "Background",
-        "default": "linear-gradient(#ffffff, #000000)"
+        "type": "range",
+        "id": "text_boxes_radius",
+        "min": 0,
+        "max": 40,
+        "step": 2,
+        "unit": "px",
+        "label": "t:settings_schema.global.settings.corner_radius.label",
+        "default": 0
       },
       {
-        "type": "color_scheme",
-        "id": "color_scheme",
-        "default": "scheme_1",
-        "label": "Color Scheme"
+        "type": "header",
+        "content": "t:settings_schema.global.settings.header__shadow.content"
       },
       {
-        "type": "font_picker",
-        "id": "heading_font",
-        "label": "Heading font",
-        "default": "helvetica_n4"
+        "type": "range",
+        "id": "text_boxes_shadow_opacity",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "%",
+        "label": "t:settings_schema.global.settings.opacity.label",
+        "default": 0
       },
       {
-        "type": "html",
-        "id": "video_embed",
-        "label": "Video embed"
+        "type": "range",
+        "id": "text_boxes_shadow_horizontal_offset",
+        "min": -40,
+        "max": 40,
+        "step": 2,
+        "unit": "px",
+        "label": "t:settings_schema.global.settings.horizontal_offset.label",
+        "default": 0
       },
       {
-        "type": "image_picker",
-        "id": "image_with_text_image",
-        "label": "Image"
+        "type": "range",
+        "id": "text_boxes_shadow_vertical_offset",
+        "min": -40,
+        "max": 40,
+        "step": 2,
+        "unit": "px",
+        "label": "t:settings_schema.global.settings.vertical_offset.label",
+        "default": 0
       },
       {
-        "type": "inline_richtext",
-        "id": "inline",
-        "default": "kk",
-        "label": "Inline rich text"
-      },
-      {
-        "type": "link_list",
-        "id": "menu",
-        "label": "Menu"
-      },
-      {
-        "type": "liquid",
-        "id": "battery_message",
-        "label": "Battery message",
-        "default": "{% if product.tags contains 'battery' %}This product can only be shipped by ground.{% else %}This product can be shipped by ground or air.{% endif %}"
-      },
-      {
-        "type": "product",
-        "id": "product",
-        "label": "Product"
-      },
-      {
-        "type": "richtext",
-        "id": "paragraph",
-        "label": "Paragraph"
-      },
-      {
-        "type": "text_alignment",
-        "id": "alignment ",
-        "label": "Text alignment",
-        "default": "center"
-      },
-      {
-        "type": "url",
-        "id": "button_link",
-        "label": "Button link"
-      },
-      {
-        "type": "video",
-        "id": "videok",
-        "label": "A Shopify-hosted video"
-      },
-      {
-        "type": "video_url",
-        "id": "product_description_video",
-        "label": "Product description video",
-        "accept": [
-          "youtube",
-          "vimeo"
-        ]
-      },
-      {
-        "type": "checkbox",
-        "id": "enable_payment_button",
-        "label": "Show dynamic checkout button",
-        "info": "Each customer will see their preferred payment method from those available on your store, such as PayPal or Apple Pay. [Learn more](https://help.shopify.com/manual/online-store/dynamic-checkout)",
-        "default": true
+        "type": "range",
+        "id": "text_boxes_shadow_blur",
+        "min": 0,
+        "max": 40,
+        "step": 5,
+        "unit": "px",
+        "label": "t:settings_schema.global.settings.blur.label",
+        "default": 0
       }
-      
-
-
-
-
-      
-      
-      
-      
     ]
   },
-  
   {
     "name": "t:settings_schema.media.name",
     "settings": [

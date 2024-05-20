@@ -105,14 +105,14 @@
           </h2>
           {% paginate article.comments by 5 %}
             <div class="article-template__comments">
-              {% comment %} {%- if comment.status == 'pending' and comment.content -%}
+              {%- if comment.status == 'pending' and comment.content -%}
                 <article id="{{ comment.id }}" class="article-template__comments-comment">
                   {{ comment.content }}
                   <footer class="right">
                     <span class="circle-divider caption-with-letter-spacing">{{ comment.author }}</span>
                   </footer>
                 </article>
-              {%- endif -%} {% endcomment %}
+              {%- endif -%}
 
               {%- for comment in article.comments -%}
                 <article id="{{ comment.id }}" class="article-template__comments-comment">

@@ -3,7 +3,7 @@
 
 <div class="page-width">
   <h1 class="title title--primary inline-richtext{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
-    {{ section.settings.title }} testste ststest
+    {{ section.settings.title }}
   </h1>
   {%- liquid
     case section.settings.sort
@@ -55,7 +55,7 @@
     {
       "type": "inline_richtext",
       "id": "title",
-      "label": "headings",
+      "label": "t:sections.main-list-collections.settings.title.label",
       "default": "Collections"
     },
     {
@@ -115,7 +115,7 @@
       "type": "range",
       "id": "columns_desktop",
       "min": 1,
-      "max": 5,
+      "max": 6,
       "step": 1,
       "default": 3,
       "label": "t:sections.main-list-collections.settings.columns_desktop.label"
